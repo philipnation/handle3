@@ -86,7 +86,7 @@ def open_facebook():
     return 'Facebook app opened!'
 
 
-@app.route('/sms', methods=['POST','GET'])
+@app.route('/sms')
 def send_message():
     phone_number = '09060507076'
     #message = request.form['message']
