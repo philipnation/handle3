@@ -81,13 +81,15 @@ def about():
 @app.route('/fb')
 def open_facebook():
     # Use UI Automator to launch the Facebook app
+    d.press.home()
+    d(text='Facebook').click()
     return 'Facebook app opened!'
 
 
 @app.route('/sms', methods=['POST','GET'])
 def send_message():
     phone_number = '09060507076'
-    message = request.form['message']
+    #message = request.form['message']
 
     # Open Notepad and copy all text
     device(text="Notepad").click()
