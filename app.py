@@ -81,8 +81,8 @@ def about():
 @app.route('/fb')
 def open_facebook():
     # Use UI Automator to launch the Facebook app
-    d.press.home()
-    d(text='Facebook').click()
+    device.press.home()
+    device(text='Facebook').click()
     return 'Facebook app opened!'
 
 
